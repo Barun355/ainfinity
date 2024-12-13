@@ -1,0 +1,80 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Host+Grotesk:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap'); */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%; /* White */
+    --foreground: 0 0% 20%; /* Dark Gray */
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 20%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 20%;
+    --primary: 16 100% 54%; /* Orange */
+    --primary-foreground: 0 0% 100%; /* White */
+    --secondary: 277 80% 32%; /* Purple */
+    --secondary-foreground: 0 0% 100%; /* White */
+    --muted: 0 0% 96%; /* Light Gray */
+    --muted-foreground: 0 0% 40%; /* Gray */
+    --accent: 20 100% 70%; /* Light Orange */
+    --accent-foreground: 0 0% 20%; /* Dark Gray */
+    --destructive: 0 84.2% 60.2%; /* Red */
+    --destructive-foreground: 0 0% 100%; /* White */
+    --border: 0 0% 87%; /* Light Gray */
+    --input: 0 0% 87%; /* Light Gray */
+    --ring: 16 100% 54%; /* Orange */
+    --radius: 0.5rem;
+    --chart-1: 16 100% 54%; /* Orange */
+    --chart-2: 277 80% 32%; /* Purple */
+    --chart-3: 0 0% 20%; /* Dark Gray */
+    --chart-4: 30 100% 72%; /* Light Orange */
+    --chart-5: 0 0% 96%; /* Light Gray */
+  }
+
+  .dark {
+    --background: 0 0% 12%; /* Almost Black */
+    --foreground: 0 0% 90%; /* White */
+    --card: 0 0% 15%; /* Dark Gray */
+    --card-foreground: 0 0% 90%; /* White */
+    --popover: 0 0% 15%; /* Dark Gray */
+    --popover-foreground: 0 0% 90%; /* White */
+    --primary: 16 100% 54%; /* Orange */
+    --primary-foreground: 0 0% 90%; /* White */
+    --secondary: 277 80% 32%; /* Purple */
+    --secondary-foreground: 0 0% 90%; /* White */
+    --muted: 0 0% 15%; /* Dark Gray */
+    --muted-foreground: 0 0% 70%; /* Gray */
+    --accent: 20 100% 70%; /* Light Orange */
+    --accent-foreground: 0 0% 90%; /* White */
+    --destructive: 0 62.8% 30.6%; /* Dark Red */
+    --destructive-foreground: 0 0% 90%; /* White */
+    --border: 0 0% 20%; /* Gray */
+    --input: 0 0% 20%; /* Gray */
+    --ring: 16 100% 54%; /* Orange */
+    --chart-1: 16 100% 54%; /* Orange */
+    --chart-2: 277 80% 32%; /* Purple */
+    --chart-3: 0 0% 70%; /* Light Gray */
+    --chart-4: 30 100% 72%; /* Light Orange */
+    --chart-5: 0 0% 15%; /* Dark Gray */
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@layer base {
+
+  * {
+    @apply border-border text-slate-200;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  #nav-mobile  div {
+    @apply w-full;
+  }
+}
