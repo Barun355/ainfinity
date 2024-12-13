@@ -44,7 +44,6 @@ export default function Events() {
     let animationFrame
     let startTime = null
     const duration = 30000 // 30 seconds for a full cycle
-    const scrollSpeed = scrollContainer.scrollWidth / (duration / 1000)
 
     const animate = (timestamp) => {
       if (!startTime) startTime = timestamp
@@ -52,12 +51,6 @@ export default function Events() {
       const progress = (elapsed % duration) / duration
       const scrollPosition = progress * scrollContainer.scrollWidth
 
-      // Ensure smooth transition when reaching the end
-      if (scrollPosition > totalWidth - scrollContainer.clientWidth) {
-        const overlap = scrollPosition - (totalWidth - scrollContainer.clientWidth)
-        scrollPosition = overlap
-      }
-      
       controls.set({ x: -scrollPosition })
 
       animationFrame = requestAnimationFrame(animate)
@@ -94,7 +87,7 @@ export default function Events() {
           {events.map((category) => (
             <TabsContent key={category.category} value={category.category}>
               <div className="overflow-hidden relative">
-              <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-muted to-transparent z-10"></div>
+                <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-muted to-transparent z-10"></div>
                 <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-muted to-transparent z-10"></div>
                 <motion.div
                   key={`${category.category}-${key}`}

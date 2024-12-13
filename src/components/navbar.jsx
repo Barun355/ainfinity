@@ -69,6 +69,10 @@ export function Navbar() {
             </Button>
           </SheetTrigger>
           <SheetContent side="left" classhorizontalName="w-[300px] sm:w-[400px]">
+            <div className="ml-auto flex items-center space-x-4 pb-8 pt-4">
+              <Button className="border border-orange-200 hover:bg-orange-400 bg-transparent text-black hover:text-white font-bold">Log In</Button>
+              <Button className="font-bold">Join now</Button>
+            </div>
             <NavigationMenu className="max-w-full flex flex-col items-start" id="nav-mobile">
               <NavigationMenuList grid className="grid-cols-1 space-y-4 items-start w-full">
                 <NavigationMenuItem>
@@ -119,73 +123,76 @@ export function Navbar() {
             </NavigationMenu>
           </SheetContent>
         </Sheet>
-        <NavigationMenu className="hidden md:flex">
-          <NavigationMenuList>
-            <NavigationMenuItem>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()} href="#hero">
-                Home
-              </NavigationMenuLink>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuTrigger>
-                <NavigationMenuLink href="#courses">
-                  Courses
+        <div className="flex justify-end md:justify-between w-full">
+          <Button className="font-bold">Logo</Button>
+          <NavigationMenu className="hidden md:flex">
+            <NavigationMenuList>
+              <NavigationMenuItem>
+                <NavigationMenuLink className={navigationMenuTriggerStyle()} href="#hero">
+                  Home
                 </NavigationMenuLink>
-              </NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <ul className="grid w-[400px] gap-3 p-4 md:w-[600px] md:grid-cols-3 lg:w-[800px]">
-                  {courses.map((course) => (
-                    <ListItem
-                      key={course.title}
-                      title={course.title}
-                      href={course.href}
-                    >
-                      {course.description}
-                    </ListItem>
-                  ))}
-                </ul>
-              </NavigationMenuContent>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuTrigger>
-                <NavigationMenuLink href="#training">
-                  Training
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <NavigationMenuTrigger>
+                  <NavigationMenuLink href="#courses">
+                    Courses
+                  </NavigationMenuLink>
+                </NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="grid w-[400px] gap-3 p-4 md:w-[600px] md:grid-cols-3 lg:w-[800px]">
+                    {courses.map((course) => (
+                      <ListItem
+                        key={course.title}
+                        title={course.title}
+                        href={course.href}
+                      >
+                        {course.description}
+                      </ListItem>
+                    ))}
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <NavigationMenuTrigger>
+                  <NavigationMenuLink href="#training">
+                    Training
+                  </NavigationMenuLink>
+                </NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-3 lg:w-[600px]">
+                    {training.map((course) => (
+                      <ListItem
+                        key={course.title}
+                        title={course.title}
+                        href={course.href}
+                      >
+                        {course.description}
+                      </ListItem>
+                    ))}
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <NavigationMenuLink className={navigationMenuTriggerStyle()} href="#events">
+                  Events
                 </NavigationMenuLink>
-              </NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-3 lg:w-[600px]">
-                  {training.map((course) => (
-                    <ListItem
-                      key={course.title}
-                      title={course.title}
-                      href={course.href}
-                    >
-                      {course.description}
-                    </ListItem>
-                  ))}
-                </ul>
-              </NavigationMenuContent>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()} href="#events">
-                Events
-              </NavigationMenuLink>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()} href="#about">
-                About
-              </NavigationMenuLink>
-            </NavigationMenuItem>
-            <NavigationMenuItem>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()} href="#contact">
-                Contact
-              </NavigationMenuLink>
-            </NavigationMenuItem>
-          </NavigationMenuList>
-        </NavigationMenu>
-        <div className="ml-auto flex items-center space-x-4">
-          <Button className="border border-orange-200 hover:bg-orange-400 bg-transparent text-black hover:text-white font-bold">Log In</Button>
-          <Button v className="font-bold">Join now</Button>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <NavigationMenuLink className={navigationMenuTriggerStyle()} href="#about">
+                  About
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <NavigationMenuLink className={navigationMenuTriggerStyle()} href="#contact">
+                  Contact
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+            </NavigationMenuList>
+          </NavigationMenu>
+          <div className="md:flex items-center space-x-4 hidden">
+            <Button className="border border-orange-200 hover:bg-orange-400 bg-transparent text-black hover:text-white font-bold">Log In</Button>
+            <Button className="font-bold">Join now</Button>
+          </div>
         </div>
       </div>
     </div>
