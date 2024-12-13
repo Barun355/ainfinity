@@ -39,7 +39,7 @@ export default function Courses() {
         <section className="w-full py-12 md:py-24 lg:py-32 bg-muted flex justify-center" id="courses">
             <div className="container px-4 md:px-6">
                 <div className="text-start space-y-4 mb-12">
-                    <h2 className="text-3xl font-bold tracking-tighter md:text-5xl text-orange-500 underline">
+                    <h2 className="text-3xl font-bold tracking-tighter md:text-5xl text-orange-500">
                         Online Courses Available
                     </h2>
                     <p className="text-gray-500 md:text-gray-400 text-lg md:text-xl">

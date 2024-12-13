@@ -51,7 +51,7 @@ export default function Contact() {
             className="space-y-4"
           >
             <div className="space-y-2">
-              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-orange-500 underline">Get in Touch</h2>
+              <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-orange-500">Get in Touch</h2>
               <p className="max-w-[600px] text-gray-500 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed dark:text-gray-400">
                 We're here to help and answer any question you might have. We look forward to hearing from you.
               </p>

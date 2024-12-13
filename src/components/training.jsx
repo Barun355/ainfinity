@@ -23,7 +23,7 @@ export default function Training() {
         <section className="w-full py-12 md:py-24 lg:py-32 bg-background flex justify-center" id="training">
             <div className="container px-4 md:px-6">
                 <div className="text-start space-y-4 mb-12">
-                    <h2 className="text-3xl font-bold tracking-tighter md:text-5xl text-orange-500 underline">
+                    <h2 className="text-3xl font-bold tracking-tighter md:text-5xl text-orange-500">
                         Training & Placement Program
                     </h2>
                     <p className="text-gray-500 md:text-gray-400 text-lg md:text-xl">

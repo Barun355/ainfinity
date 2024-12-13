@@ -4,7 +4,7 @@ export default function About() {
         <div className="container px-4 md:px-6">
           <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 items-center">
             <div className="space-y-4">
-              <h2 className="text-3xl font-bold tracking-tighter md:text-5xl text-orange-500 underline">About Us</h2>
+              <h2 className="text-3xl font-bold tracking-tighter md:text-5xl text-orange-500">About Us</h2>
               <p className="text-gray-500 md:text-gray-400 text-lg md:text-xl">
                 We are a leading online education platform dedicated to empowering professionals
                 with cutting-edge skills in finance, technology, and data analytics. Our expert-led
