@@ -10,7 +10,7 @@ import {
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
 import { Button } from "@/components/ui/button"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "./ui/accordion"
 import { Menu } from "lucide-react"
@@ -58,6 +58,9 @@ const training = [
 
 
 export function Navbar() {
+
+  const navigate = useNavigate()
+
   return (
     <div className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 flex justify-center px-4">
       <div className="container flex h-14 items-center justify-center">
@@ -70,8 +73,16 @@ export function Navbar() {
           </SheetTrigger>
           <SheetContent side="left" classhorizontalName="w-[300px] sm:w-[400px]">
             <div className="ml-auto flex items-center space-x-4 pb-8 pt-4">
-              <Button className="border border-orange-200 hover:bg-orange-400 bg-transparent text-black hover:text-white font-bold">Log In</Button>
-              <Button className="font-bold">Join now</Button>
+              <Button
+                className="border border-orange-200 hover:bg-orange-400 bg-transparent text-black hover:text-white font-bold"
+                onClick={() => navigate("/login")}
+              >
+                Log In
+              </Button>
+              <Button
+                className="font-bold"
+                onClick={() => navigate("/register")}
+              >Join now</Button>
             </div>
             <NavigationMenu className="max-w-full flex flex-col items-start" id="nav-mobile">
               <NavigationMenuList grid className="grid-cols-1 space-y-4 items-start w-full">
@@ -190,8 +201,16 @@ export function Navbar() {
             </NavigationMenuList>
           </NavigationMenu>
           <div className="md:flex items-center space-x-4 hidden">
-            <Button className="border border-orange-200 hover:bg-orange-400 bg-transparent text-black hover:text-white font-bold">Log In</Button>
-            <Button className="font-bold">Join now</Button>
+            <Button
+              className="border border-orange-200 hover:bg-orange-400 bg-transparent text-black hover:text-white font-bold"
+              onClick={() => navigate("/login")}
+            >
+              Log In
+            </Button>
+            <Button
+              className="font-bold"
+              onClick={() => navigate("/register")}
+            >Join now</Button>
           </div>
         </div>
       </div>
